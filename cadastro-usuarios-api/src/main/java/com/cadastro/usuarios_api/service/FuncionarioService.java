@@ -32,7 +32,7 @@ public class FuncionarioService {
         }
 
         if (funcionarioRepository.findByEmail(funcionario.getEmail()) != null) {
-            throw new ValidationException("Já existe um funcionário cadastrado com este email.");
+            throw new ValidationException("Já existe um funcionário cadastrado com este email!!");
         }
 
         return funcionarioRepository.save(funcionario);
